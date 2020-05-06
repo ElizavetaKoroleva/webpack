@@ -73,6 +73,8 @@ module.exports = {
   devServer: {
     port: 3000,
     hot: isDev,
+    contentBase: [ 'src/' ],
+    watchContentBase: true
   },
   devtool: isDev ? 'source-map' : '',
   plugins : [
@@ -145,7 +147,7 @@ module.exports = {
       },
       {
         test: /\.(ttf|woff|woff2)$/,
-        use: ['file-loader']
+        loader: 'url-loader?limit=100000'
       },
       { 
         test: /\.js$/, 
