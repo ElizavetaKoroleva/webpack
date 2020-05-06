@@ -1,0 +1,21 @@
+.component {
+    height: 100vh;
+    padding: 80px 0;
+    background-color: color('graydark');
+
+    &__title {
+        margin: 0 0 20px;
+        text-align: center;
+        color: color('black');
+        font-size: $font-size-xxl;
+        font-weight: $font-weight-bold;
+
+        @include media-breakpoint-down(md) {
+            font-size: $font-size-lg;
+        }
+    }
+
+    &__description {
+        opacity: 0.6;
+    }
+}
